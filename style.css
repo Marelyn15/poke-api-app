@@ -1,0 +1,44 @@
+*{
+    padding:0;
+    margin: 0; 
+    box-sizing: border-box;
+    
+}
+
+h1{
+    font-size: 30px;
+    background-image: linear-gradient(to right top, #ec0909, #e7750d, #e1ab47, #e1d68c, #f0fbd6); ;
+}
+label{
+    font-size: 20px;
+}
+.poke{ 
+    width: 25%;
+    height: 50px;
+    border-radius: 50px;
+    outline: none;
+}
+
+button{
+    left: 0;
+    width: 60ppx;
+    height: 50px;
+    border-radius: 20px;
+    padding: 14px 25px;
+}
+
+.mostrarPokemon{
+    border: 1px solid red;
+    background-color: white;
+    width:500px;
+    height: 500px;
+    align-items: center;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+name, num{
+    text-align: center;
+    font-size: large;
+}
