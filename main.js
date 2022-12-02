@@ -8,21 +8,20 @@ let borrar  = document.getElementById("delete");
 borrar.onclick = deletContent;
 
 
-function getPokemon(nombre){
+function getPokemon(){
     
    //container.innerHTML = nombre;
-/*
-    fetch('https://pokeapi.co/api/v2/pokemon/1')
+   const nombre = document.getElementById("poke").value;
+   const url = `https://pokeapi.co/api/v2/pokemon/${nombre}`
+
+    fetch(url)
     .then((response) => response.json())
-    .then((data) =>{showPokemon(data)
+    .then((data) =>{showPokemon(data)});
     
-    });
-    */
 
     
-        nombre = document.getElementById("poke").value;
 
-    
+    /*
         switch(nombre){
             case 'pikachu':
                 fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
@@ -53,9 +52,11 @@ function getPokemon(nombre){
                 container.innerHTML = 'no data'
                 break;
         }  
+        */
     }
 
    function showPokemon(pokemon){
+    deletContent();
     let img = document.createElement('img');
     img.src = pokemon.sprites.front_shiny;
 
