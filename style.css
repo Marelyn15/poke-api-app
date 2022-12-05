@@ -7,7 +7,7 @@
 
 h1{
     font-size: 30px;
-    background-image: linear-gradient(to right top, #ec0909, #e7750d, #e1ab47, #e1d68c, #f0fbd6); ;
+    background-color: #55efc4;
 }
 label{
     font-size: 20px;
@@ -34,6 +34,10 @@ button{
     height: 500px;
     align-items: center;
 }
+.mostrarPokemon-hijo{
+    margin: 0px auto;
+}
+
 img{
     width: 200px;
     height: 200px;

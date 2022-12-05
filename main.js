@@ -10,7 +10,7 @@ borrar.onclick = deletContent;
 
 function getPokemon(){
     
-   //container.innerHTML = nombre;
+ 
    const nombre = document.getElementById("poke").value;
    const url = `https://pokeapi.co/api/v2/pokemon/${nombre}`
 
@@ -19,58 +19,62 @@ function getPokemon(){
     .then((data) =>{showPokemon(data)});
     
 
-    
-
-    /*
-        switch(nombre){
-            case 'pikachu':
-                fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
-                .then((response) => response.json())
-                .then((data) =>{showPokemon(data) });
-                break;
-            case 'ditto': 
-                fetch('https://pokeapi.co/api/v2/pokemon/ditto')
-                .then((response) => response.json())
-                .then((data) =>{showPokemon(data) });
-                break;
-            case 'bulbasaur':
-                fetch('https://pokeapi.co/api/v2/pokemon/1')
-                .then((response) => response.json())
-                .then((data) =>{showPokemon(data)  });
-                break;
-            case 'snivy':
-                fetch('https://pokeapi.co/api/v2/pokemon/snivy')
-                .then((response) => response.json())
-                .then((data) =>{showPokemon(data)  });
-                break;
-            case 'marshtomp':
-                fetch('https://pokeapi.co/api/v2/pokemon/marshtomp')
-                .then((response) => response.json())
-                .then((data) =>{showPokemon(data)  });
-                break;
-            default: 
-                container.innerHTML = 'no data'
-                break;
-        }  
-        */
     }
 
+    //Caracteristicas a mostrar
    function showPokemon(pokemon){
     deletContent();
+
     let img = document.createElement('img');
     img.src = pokemon.sprites.front_shiny;
+
+    let tituloName = document.createElement('h3');
+    tituloName.textContent = 'Nombre: ';
 
     let name = document.createElement('h3');
     name.textContent = pokemon.name;
 
+    let tituloID = document.createElement('h4');
+    tituloID.textContent = 'Pokedex No.: ';
+
     let num = document.createElement('p');
     num.textContent = pokemon.order;
+    
+    let tituloAbilities = document.createElement('h4');
+    tituloAbilities.textContent = 'Abilities: ';
 
+    let ability1 = document.createElement('p');
+    ability1.textContent = pokemon.abilities[0].ability.name;
+
+    let ability2 = document.createElement('p');
+    ability2.textContent = pokemon.abilities[1].ability.name; 
+
+    let tituloTypes = document.createElement('h4');
+    tituloTypes.textContent = 'Types: ';
+
+    let type1 = document.createElement('p');
+    type1.textContent = pokemon.types[0].type.name;
+
+    /*
+    let type2 = document.createElement('p');
+    type2.textContent = pokemon.types[1].type.name;
+    */
+    
     
     container.appendChild(img);
+    container.appendChild(tituloName);
     container.appendChild(name);
+    container.appendChild(tituloID)
     container.appendChild(num);
-   
+    container.appendChild(tituloAbilities)
+    container.appendChild(ability1);
+    container.appendChild(ability2);
+    container.appendChild(tituloTypes)
+    container.appendChild(type1);
+    container.appendChild(type2);
+    
+
+
    }
 
    function deletContent(){
