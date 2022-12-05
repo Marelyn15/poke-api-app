@@ -4,6 +4,12 @@
     box-sizing: border-box;
     
 }
+body{
+    background-image: url('./images/Pokemon-esmeralda.PNG');
+    background-repeat:no-repeat;
+    height: 100%;
+    background-size: 100% 100%;
+}
 .mover-todo{
     margin: 0 30%;
 }
@@ -17,6 +23,7 @@ h1{
 label{
     margin: 30%;
     font-size: 20px;
+    color: white;
 }
 .formulario{
     display: flex;
@@ -49,6 +56,7 @@ img{
     height: 200px;
 }
 img,tituloName,name,tituloID,num,tituloAbilities,ability1,ability2{
-    margin: 0 30%
-    font-size: large;
+    margin: 0 30%;
+    display: flex;
+    text-align: center;
 }
