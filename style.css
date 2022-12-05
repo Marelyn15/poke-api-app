@@ -25,12 +25,17 @@ label{
     font-size: 20px;
     color: white;
 }
+.busqueda{
+    width:30px;
+    height: 30px;
+   color: white;
+}
 .formulario{
     display: flex;
     margin:0 5%;
 }
 .poke{ 
-    width: 45%;
+    width: 345px;
     height: 50px;
     border-radius: 50px;
     outline: none;
@@ -55,7 +60,7 @@ img{
     width: 200px;
     height: 200px;
 }
-img,tituloName,name,tituloID,num,tituloAbilities,ability1,ability2{
+.elementosAgregados{
     margin: 0 30%;
     display: flex;
     text-align: center;

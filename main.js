@@ -54,11 +54,24 @@ function getPokemon(){
 
     let type1 = document.createElement('p');
     type1.textContent = pokemon.types[0].type.name;
+    
 
     /*
     let type2 = document.createElement('p');
     type2.textContent = pokemon.types[1].type.name;
     */
+    
+    img.classList.add('elementosAgregados');
+    tituloName.classList.add('elementosAgregados');
+    name.classList.add('elementosAgregados');
+    tituloID.classList.add('elementosAgregados');
+    num.classList.add('elementosAgregados');
+    tituloAbilities.classList.add('elementosAgregados');
+    ability1.classList.add('elementosAgregados');
+    ability2.classList.add('elementosAgregados');
+    tituloTypes.classList.add('elementosAgregados');
+    type1.classList.add('elementosAgregados');
+   // type2.classList.add('elementosAgregados');
     
     
     container.appendChild(img);
